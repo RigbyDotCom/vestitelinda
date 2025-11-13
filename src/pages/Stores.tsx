@@ -63,7 +63,7 @@ const Stores = () => {
         
         <div className="mt-16 p-8 bg-gradient-pastel rounded-2xl text-center">
           <h2 className="text-3xl font-light tracking-wide mb-4">
-            ¿Querés abrir una franquicia?
+            ¿Querés asociarte con nosotros?                     
           </h2>
           <p className="text-muted-foreground font-light mb-6 max-w-xl mx-auto">
             Escribinos para conocer más sobre nuestras oportunidades de negocio
