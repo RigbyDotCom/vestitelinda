@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
+  id: number;
   name: string;
   price: number;
   image: string;
@@ -13,19 +15,21 @@ interface ProductCardProps {
   colors?: { name: string; value: string }[];
 }
 
-const ProductCard = ({ name, price, image, category, sizes = [], colors = [] }: ProductCardProps) => {
+const ProductCard = ({ id, name, price, image, category, sizes = [], colors = [] }: ProductCardProps) => {
   const [selectedSize, setSelectedSize] = useState(sizes[0] || "");
   const [selectedColor, setSelectedColor] = useState(colors[0]?.value || "");
 
   return (
     <Card className="group overflow-hidden border-border hover:shadow-medium transition-all duration-300">
-      <div className="aspect-[3/4] overflow-hidden bg-muted">
-        <img 
-          src={image} 
-          alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
+      <Link to={`/product/${id}`}>
+        <div className="aspect-[3/4] overflow-hidden bg-muted">
+          <img 
+            src={image} 
+            alt={name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      </Link>
       
       <div className="p-4 space-y-3">
         {category && (
