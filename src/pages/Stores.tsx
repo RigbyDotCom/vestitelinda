@@ -16,13 +16,6 @@ const Stores = () => {
     phone: "+54 11 4804-3421",
     hours: "Lun a Sáb: 10:00 - 20:00 | Dom: 12:00 - 18:00",
     image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&h=600&fit=crop"
-  }, {
-    id: 3,
-    name: "Belgrano",
-    address: "Av. Cabildo 2550, CABA",
-    phone: "+54 11 4783-9012",
-    hours: "Lun a Sáb: 10:00 - 20:00 | Dom: 12:00 - 18:00",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=600&fit=crop"
   }];
   return <div className="min-h-screen bg-background">
       <Navbar />
@@ -37,7 +30,7 @@ const Stores = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {stores.map(store => <Card key={store.id} className="overflow-hidden hover:shadow-medium transition-all duration-300">
               <div className="aspect-video overflow-hidden bg-muted">
                 
