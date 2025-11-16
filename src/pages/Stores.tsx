@@ -68,8 +68,8 @@ const Stores = () => {
           <p className="text-muted-foreground font-light mb-6 max-w-xl mx-auto">
             Escribinos para conocer más sobre nuestras oportunidades de negocio
           </p>
-          <a href="mailto:franquicias@vestitelinda.com" className="text-foreground hover:text-primary transition-colors font-light tracking-wide">
-            franquicias@vestitelinda.com
+          <a href="mailto:vestitelinda@gmail.com" className="text-foreground hover:text-primary transition-colors font-light tracking-wide">
+            vestitelinda@gmail.com
           </a>
         </div>
       </div>
