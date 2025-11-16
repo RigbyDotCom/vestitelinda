@@ -4,7 +4,7 @@ import { MapPin, Clock, Phone } from "lucide-react";
 const Stores = () => {
   const stores = [{
     id: 1,
-    name: "Palermo Soho",
+    name: "Suipacha",
     address: "Av. Santa Fe 2850, CABA",
     phone: "+54 11 4832-5678",
     hours: "Lun a Sáb: 10:00 - 20:00 | Dom: 12:00 - 18:00",
