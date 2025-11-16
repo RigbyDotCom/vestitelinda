@@ -5,7 +5,7 @@ const Stores = () => {
   const stores = [{
     id: 1,
     name: "Suipacha",
-    address: "Av. Santa Fe 2850, CABA",
+    address: "25 de mayo 580, Suipacha",
     phone: "+54 12 3456-7890",
     hours: "Lun a Sáb: 10:00 - 20:00",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop"
