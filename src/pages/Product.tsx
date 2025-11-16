@@ -5,9 +5,13 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { ArrowLeft } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
+import { useToast } from "@/hooks/use-toast";
 
 const Product = () => {
   const { id } = useParams();
+  const { addItem } = useCart();
+  const { toast } = useToast();
   
   // Productos de ejemplo - en una app real vendrían de una base de datos
   const products = [
@@ -218,6 +222,42 @@ const Product = () => {
             <Button 
               size="lg"
               className="w-full text-sm tracking-wide uppercase mt-8"
+              onClick={() => {
+                if (!selectedSize) {
+                  toast({
+                    title: "Seleccioná un talle",
+                    description: "Por favor, seleccioná un talle antes de agregar al carrito.",
+                    variant: "destructive",
+                  });
+                  return;
+                }
+                
+                if (!selectedColor) {
+                  toast({
+                    title: "Seleccioná un color",
+                    description: "Por favor, seleccioná un color antes de agregar al carrito.",
+                    variant: "destructive",
+                  });
+                  return;
+                }
+                
+                const colorObj = product.colors.find(c => c.value === selectedColor);
+                if (colorObj) {
+                  addItem({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    size: selectedSize,
+                    color: colorObj,
+                  });
+                  
+                  toast({
+                    title: "Producto agregado",
+                    description: `${product.name} (${selectedSize}, ${colorObj.name}) agregado al carrito.`,
+                  });
+                }
+              }}
             >
               Agregar al Carrito
             </Button>
