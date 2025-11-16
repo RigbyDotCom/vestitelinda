@@ -12,7 +12,7 @@ const Stores = () => {
   }, {
     id: 2,
     name: "Chivilcoy",
-    address: "Av. Callao 1823, CABA",
+    address: "Maipú 49, Chivilcoy",
     phone: "+54 12 3456-7890",
     hours: "Lun a Sáb: 10:00 - 20:00",
     image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&h=600&fit=crop"
