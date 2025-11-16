@@ -6,15 +6,15 @@ const Stores = () => {
     id: 1,
     name: "Suipacha",
     address: "Av. Santa Fe 2850, CABA",
-    phone: "+54 11 4832-5678",
-    hours: "Lun a Sáb: 10:00 - 20:00 | Dom: 12:00 - 18:00",
+    phone: "+54 12 3456-7890",
+    hours: "Lun a Sáb: 10:00 - 20:00",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop"
   }, {
     id: 2,
-    name: "Recoleta",
+    name: "Chivilcoy",
     address: "Av. Callao 1823, CABA",
-    phone: "+54 11 4804-3421",
-    hours: "Lun a Sáb: 10:00 - 20:00 | Dom: 12:00 - 18:00",
+    phone: "+54 12 3456-7890",
+    hours: "Lun a Sáb: 10:00 - 20:00",
     image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&h=600&fit=crop"
   }];
   return <div className="min-h-screen bg-background">
